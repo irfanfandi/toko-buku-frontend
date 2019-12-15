@@ -15,57 +15,11 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import Index from "views/Index.jsx";
-import Profile from "views/examples/Profile.jsx";
-import Maps from "views/examples/Maps.jsx";
-import Register from "views/examples/Register.jsx";
+import Register from "views/Register/RegisterApp.js";
 import Login from "views/Login/LoginApp.js";
-import Tables from "views/examples/Tables.jsx";
-import Icons from "views/examples/Icons.jsx";
+import Logout from "views/Logout/Logout.js";
 
 var routes = [
-  {
-    path: "/index",
-    name: "Dashboard",
-    icon: "ni ni-tv-2 text-primary",
-    component: Index,
-    layout: "/admin"
-  },
-  {
-    path: "/tables",
-    name: "Penjualan",
-    icon: "ni ni-bullet-list-67 text-red",
-    component: Tables,
-    layout: "/admin"
-  },
-  {
-    path: "/icons",
-    name: "Master Buku",
-    icon: "ni ni-planet text-blue",
-    component: Icons,
-    layout: "/admin"
-  },
-  {
-    path: "/maps",
-    name: "Master Category",
-    icon: "ni ni-pin-3 text-orange",
-    component: Maps,
-    layout: "/admin"
-  },
-  {
-    path: "/maps",
-    name: "Master User",
-    icon: "ni ni-pin-3 text-orange",
-    component: Maps,
-    layout: "/admin"
-  },
-  {
-    path: "/user-profile",
-    name: "User Profile",
-    icon: "ni ni-single-02 text-yellow",
-    component: Profile,
-    layout: "/admin"
-  },
   {
     path: "/login",
     name: "Login",
@@ -79,6 +33,14 @@ var routes = [
     icon: "ni ni-circle-08 text-pink",
     component: Register,
     layout: "/auth"
+  },
+  {
+    path: "/logout",
+    name: "Logout",
+    icon: "ni ni-key-25 text-info",
+    component: Logout,
+    layout: "/auth"
   }
+
 ];
 export default routes;

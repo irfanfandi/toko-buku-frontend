@@ -20,7 +20,6 @@ import { Link } from "react-router-dom";
 // reactstrap components
 import {
   UncontrolledCollapse,
-  NavbarBrand,
   Navbar,
   NavItem,
   NavLink,
@@ -39,12 +38,12 @@ class AdminNavbar extends React.Component {
           expand="md"
         >
           <Container className="px-4">
-            <NavbarBrand to="/" tag={Link}>
+            {/* <NavbarBrand to="/" tag={Link}>
               <img alt="..." src={require("assets/img/brand/argon-react-white.png")} />
-            </NavbarBrand>
-            <button className="navbar-toggler" id="navbar-collapse-main">
+            </NavbarBrand> */}
+            {/* <button className="navbar-toggler" id="navbar-collapse-main">
               <span className="navbar-toggler-icon" />
-            </button>
+            </button> */}
             <UncontrolledCollapse navbar toggler="#navbar-collapse-main">
               <div className="navbar-collapse-header d-md-none">
                 <Row>
@@ -68,12 +67,7 @@ class AdminNavbar extends React.Component {
                 </Row>
               </div>
               <Nav className="ml-auto" navbar>
-                <NavItem>
-                  <NavLink className="nav-link-icon" to="/" tag={Link}>
-                    <i className="ni ni-planet" />
-                    <span className="nav-link-inner--text">Dashboard</span>
-                  </NavLink>
-                </NavItem>
+
                 <NavItem>
                   <NavLink
                     className="nav-link-icon"
@@ -92,16 +86,6 @@ class AdminNavbar extends React.Component {
                   >
                     <i className="ni ni-key-25" />
                     <span className="nav-link-inner--text">Login</span>
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className="nav-link-icon"
-                    to="/admin/user-profile"
-                    tag={Link}
-                  >
-                    <i className="ni ni-single-02" />
-                    <span className="nav-link-inner--text">Profile</span>
                   </NavLink>
                 </NavItem>
               </Nav>

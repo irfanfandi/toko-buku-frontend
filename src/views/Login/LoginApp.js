@@ -1,34 +1,34 @@
 import React from 'react'
 import Login from './Login.jsx'
 import axios from 'axios'
-import { Redirect } from "react-router-dom";
+import {Redirect } from 'react-router-dom';
 
 
 
 const loginApp = () => {
-        
-    const renderRedirect = () => {
-        // localStorage.setItem('login', 'true');        
-        return <Redirect to='/admin/index' />
-      }
 
     const onSubmit = async (name,password) => {        
         const request = await axios.get(`http://localhost:3000/auth/${name}/${password}`,{        
         })
         const data = request.data
-        console.log(data);
         if (data <= 0) {
             alert('Username & Password Tidak ditemukan')
-            localStorage.removeItem('login')
+            localStorage.setItem('login', 'false');
         }else{
             alert('Sukses Login')
-            renderRedirect()
-            console.log("sasasa");
+            localStorage.setItem('login', 'true');
+            localStorage.setItem('userLogin', JSON.stringify(data));
+            localStorage.setItem('role', name);
         }
                 
     }
-    return(
-            <Login onLogin = {onSubmit}/>
-    )
+
+    if(localStorage.getItem('login')==='true' && localStorage.getItem('role')==='Admin'){
+        return <Redirect to="/admin/index" />
+    }else if(localStorage.getItem('login')==='true' && localStorage.getItem('role')!=='Admin'){
+        return <Redirect to="/admin/sasasas" />
+    }else{
+        return <Login onLogin = {onSubmit}/>
+    }
 }
 export default loginApp

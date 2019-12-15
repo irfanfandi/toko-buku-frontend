@@ -1,21 +1,5 @@
-/*!
-
-=========================================================
-* Argon Dashboard React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React, {useState} from "react";
+import { NavLink } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -45,7 +29,7 @@ import {
     return (
       <>
         <Col lg="5" md="7">
-          <Card className="bg-secondary shadow border-0">
+          <Card className="bg-primary shadow border-0">
             <CardBody className="px-lg-5 py-lg-5">
               <Form role="form" className="Login">
                 <FormGroup className="mb-3">
@@ -91,19 +75,20 @@ import {
                   </Button>
                 </div>
               </Form>
+              <Row className="text-right">
+            </Row>
             </CardBody>
-          </Card>
-          <Row className="mt-3">
-            <Col className="text-right" xs="6">
-              <a
-                className="text-light"
-                href="#pablo"
-                onClick={e => e.preventDefault()}
+            <Col className="text-center" >
+              <NavLink
+                to={'/auth/register'}
+                tag={'Register'}
+                activeClassName="active"
               >
-                <small>Create new account</small>
-              </a>
+                <i className={'ni ni-circle-08 mt-10'}/>
+                {'Create new account'}
+            </NavLink>
             </Col>
-          </Row>
+          </Card>
         </Col>
       </>
     );
