@@ -26,7 +26,7 @@ const loginApp = () => {
     if(localStorage.getItem('login')==='true' && localStorage.getItem('role')==='Admin'){
         return <Redirect to="/admin/index" />
     }else if(localStorage.getItem('login')==='true' && localStorage.getItem('role')!=='Admin'){
-        return <Redirect to="/admin/sasasas" />
+        return <Redirect to="/customer/customer" />
     }else{
         return <Login onLogin = {onSubmit}/>
     }

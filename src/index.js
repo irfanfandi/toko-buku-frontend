@@ -30,12 +30,18 @@ import 'mdbreact/dist/css/mdb.css';
 
 import AdminLayout from "layouts/Admin.jsx";
 import AuthLayout from "layouts/Auth.jsx";
+import CustomerLayout from "layouts/Customer.jsx";
+import Home from './views/Customer/home'
+import Cart from './views/Customer/cart'
+
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/admin" render={props => <AdminLayout {...props} />} />
       <Route path="/auth" render={props => <AuthLayout {...props} />} />
+      <Route path="/customer" render={props => <CustomerLayout {...props} />} />
+      <Route path="/cart" exact component={Cart} />
       <Redirect from="/" to="/admin/index" />
     </Switch>
   </BrowserRouter>,

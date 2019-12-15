@@ -1,0 +1,40 @@
+.listBuku{
+    padding:10px;
+    
+}
+.card-image{
+    padding: 10px;
+}
+img{
+    margin:10px;
+    height: 200px;
+    width: 100% !important;
+}
+.buku{
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.judulBuku{
+    font-family: 'Comfortaa', cursive;
+    font-size: medium;
+    padding: 10px;
+}
+.priceBuku{
+    font-size: medium;
+    padding: 10px;
+    color:orange;
+}
+.detailBuku{
+    padding:  10px 0px 10px 0px !important;
+}
+
+.detailBuku i{
+    font-size: medium;
+}
+.addToCart{
+    margin-top:10px;
+    margin-bottom:10px;
+}

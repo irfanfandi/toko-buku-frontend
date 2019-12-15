@@ -37,6 +37,16 @@
       sizes="76x76"
       href="%PUBLIC_URL%/apple-icon.png"
     />
+    <!-- Compiled and minified CSS -->
+    <script>
+      if(localStorage.getItem(localStorage.getItem('role')!=='Admin')){
+        return '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">'
+      }
+      </script>
+    <!--Import Google Icon Font-->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
     <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
@@ -57,5 +67,14 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script>
+       $(document).ready(function(){
+          $('.modal').modal();
+        });
+    </script>
   </body>
 </html>
